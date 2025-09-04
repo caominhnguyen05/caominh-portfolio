@@ -27,14 +27,14 @@ const SectionWrapper = ({
 const About: React.FC = () => {
   const education: Education[] = [
     {
-      institution: "TU Delft",
+      institution: "Delft University of Technology",
       degree: "BSc Computer Science & Engineering",
-      years: "2022 - 2025 (Expected)",
+      years: "2023 - 2026 (Expected)",
     },
     {
       institution: "Vinschool Times City",
-      degree: "High School Diploma",
-      years: "2019 - 2022",
+      degree: "Cambridge International AS and A Levels program",
+      years: "2021 - 2023",
     },
   ];
 
