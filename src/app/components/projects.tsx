@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
       liveUrl: "https://caominhnguyen.vercel.app",
     },
     {
-      title: "1. Splitty - Group Expense Management",
+      title: "2. Splitty - Group Expense Management",
       description:
         "Collaborated with five students to develop a Java-based desktop application that streamlines group expense splitting after events. The app calculates individual balances, determines who owes whom, and minimizes the number of payments needed.",
       tags: [
@@ -107,7 +107,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/caominhnguyen05/splitty_manage_expenses",
     },
     {
-      title: "2. CineBrowse - Movie Browser Web App",
+      title: "3. CineBrowse - Movie Browser Web App",
       description:
         "A movie browser web app using React.js and the OMDb API, enabling users to search for keywords in movie titles and get dynamically changing results.",
       tags: ["React.js", "UI Design", "JavaScript", "CSS", "External API"],
