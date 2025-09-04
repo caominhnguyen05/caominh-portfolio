@@ -79,6 +79,20 @@ const ProjectCard: React.FC<Project> = ({
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
+      title: "1. Personal Portfolio Website",
+      description:
+        "You are looking at it right now! This is my digital resume and project showcase. Designed with a minimalist, modern aesthetic, and built with a focus on responsiveness and smooth user interaction. I used Next.js with Tailwind CSS and Framer Motion for this website.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Vercel",
+      ],
+      githubUrl: "https://github.com/caominhnguyen05/caominh-portfolio",
+      liveUrl: "https://caominhnguyen.vercel.app",
+    },
+    {
       title: "1. Splitty - Group Expense Management",
       description:
         "Collaborated with five students to develop a Java-based desktop application that streamlines group expense splitting after events. The app calculates individual balances, determines who owes whom, and minimizes the number of payments needed.",
@@ -90,8 +104,7 @@ const Projects: React.FC = () => {
         "GitLab",
         "JavaFX",
       ],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/caominhnguyen05/splitty_manage_expenses",
     },
     {
       title: "2. CineBrowse - Movie Browser Web App",
