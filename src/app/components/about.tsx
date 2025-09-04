@@ -31,7 +31,7 @@ const About: React.FC = () => {
     },
     {
       institution: "Vinschool Times City - Hanoi, Vietnam",
-      degree: "Cambridge International A-Level",
+      degree: "Cambridge International AS and A Levels program",
       years: "2019 - 2022",
     },
   ];

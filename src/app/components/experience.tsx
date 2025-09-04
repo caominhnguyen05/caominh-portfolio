@@ -44,6 +44,15 @@ const Experience: React.FC = () => {
       ],
     },
     {
+      role: "Teaching Assistant",
+      company: "TU Delft",
+      period: "Sep 2025 - Present",
+      description: [
+        "I am currently a Teaching Assistant for the CSE program second-year course Big Data Processing.",
+        "Helped students have a better understanding of the course material by answering questions about the course theory and assignments.",
+      ],
+    },
+    {
       role: "Software Engineer Intern",
       company: "Dizconto",
       period: "May 2025 - Present",
