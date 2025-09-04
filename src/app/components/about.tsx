@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { Education } from "../types"; // Import our type
+import { Education } from "../types";
 
 interface SectionWrapperProps {
   children: React.ReactNode;
@@ -43,8 +43,8 @@ const About: React.FC = () => {
       </h2>
       <div className="text-center text-lg text-gray-300 space-y-6">
         <p>
-          I'm Minh, from Vietnam, a third-year Computer Science student at Delft
-          University of Technology with a strong foundation in software
+          I&apos;m Minh, from Vietnam, a third-year Computer Science student at
+          Delft University of Technology with a strong foundation in software
           development, algorithms, and data structures. I have gained hands-on
           experience as a Software Engineer Intern at{" "}
           <a
@@ -72,7 +72,7 @@ const About: React.FC = () => {
         <p>
           I love to work in friendly, collaborative environments and am
           passionate about using technology to solve real-world problems. When
-          I'm not coding, I enjoy watching football, going to the gym and
+          I&apos;m not coding, I enjoy watching football, going to the gym and
           travelling around Europe to explore new cities and culture.
         </p>
       </div>

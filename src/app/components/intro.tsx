@@ -16,7 +16,7 @@ const Intro: React.FC = () => {
         className="max-w-4xl mx-auto px-6"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-          Hi, I'm Cao Minh Nguyen.
+          Hi, I&apos;m Cao Minh Nguyen.
           <br />
           <span className="text-gray-400">
             A Computer Science Student at TU Delft.
