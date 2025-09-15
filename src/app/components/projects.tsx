@@ -79,7 +79,24 @@ const ProjectCard: React.FC<Project> = ({
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
-      title: "1. Personal Portfolio Website",
+      title: "1. CS Hub - Computer Science Revision website",
+      description:
+        "As a Computer Science tutor, I made this website for my students to easily find and navigate between different revision materials for their Computer Science exams, including past papers, revision notes, books and syllabuses. What is unique is that they can create an account to track their past papers completion progress, including to-do list and completed papers list. Open the live URL to take a look!",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "OAuth",
+        "Better-Auth",
+        "Vercel",
+      ],
+      githubUrl: "https://github.com/caominhnguyen05/cs-revision-web",
+      liveUrl: "https://cs-revision.vercel.app/",
+    },
+    {
+      title: "2. Personal Portfolio Website",
       description:
         "You are looking at it right now! This is my digital resume and project showcase. Designed with a minimalist, modern aesthetic, and built with a focus on responsiveness and smooth user interaction. I used Next.js with Tailwind CSS and Framer Motion for this website.",
       tags: [
@@ -93,7 +110,7 @@ const Projects: React.FC = () => {
       liveUrl: "https://caominhnguyen.vercel.app",
     },
     {
-      title: "2. Splitty - Group Expense Management",
+      title: "3. Splitty - Group Expense Management",
       description:
         "Collaborated with five students to develop a Java-based desktop application that streamlines group expense splitting after events. The app calculates individual balances, determines who owes whom, and minimizes the number of payments needed.",
       tags: [
@@ -107,7 +124,7 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/caominhnguyen05/splitty_manage_expenses",
     },
     {
-      title: "3. CineBrowse - Movie Browser Web App",
+      title: "4. CineBrowse - Movie Browser Web App",
       description:
         "A movie browser web app using React.js and the OMDb API, enabling users to search for keywords in movie titles and get dynamically changing results.",
       tags: ["React.js", "UI Design", "JavaScript", "CSS", "External API"],
