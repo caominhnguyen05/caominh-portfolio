@@ -24,6 +24,15 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, id }) => (
 const Experience: React.FC = () => {
   const experiences: ExperienceType[] = [
     {
+      role: "Teaching Assistant",
+      company: "TU Delft",
+      period: "Sep 2025 - Nov 2025",
+      description: [
+        "I am currently a Teaching Assistant for the CSE program second-year course Big Data Processing.",
+        "Helped students have a better understanding of the course material by answering questions about the course theory and assignments.",
+      ],
+    },
+    {
       role: "Software Engineer Intern",
       company: "FPT Software",
       period: "Jul 2025 - Sep 2025",
@@ -31,15 +40,6 @@ const Experience: React.FC = () => {
         "Developed a cross-platform voice recording & analysis mobile application using Flutter and AWS backend services, designed for self-assessment of speech performance and supporting healthcare professionals at Sunstar to diagnose and monitor oral frailty in patients.",
         "Integrated Amazon Transcribe for real-time speech-to-text and Amazon Comprehend for sentiment/emotion analysis of transcribed text.",
         "Implemented secure user authentication and data management with Amazon Cognito.",
-      ],
-    },
-    {
-      role: "Teaching Assistant",
-      company: "TU Delft",
-      period: "Sep 2025 - Nov 2025",
-      description: [
-        "I am currently a Teaching Assistant for the CSE program second-year course Big Data Processing.",
-        "Helped students have a better understanding of the course material by answering questions about the course theory and assignments.",
       ],
     },
     {
