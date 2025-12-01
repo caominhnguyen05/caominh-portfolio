@@ -34,19 +34,9 @@ const Experience: React.FC = () => {
       ],
     },
     {
-      role: "Software Engineer Intern",
-      company: "RET",
-      period: "Apr 2025 - Jun 2025",
-      description: [
-        "Worked with a team of five to develop a web-based prototype application that enables process managers to visualize business processes, their interdependencies, and associated metadata through a layered, graph-based interface.",
-        "Designed and implemented frontend components using React.js with Vite, ensuring a responsive and user-friendly interface.",
-        "Contributed to the backend development by building RESTful API endpoints with Java Spring Boot and connecting them to a PostgreSQL database.",
-      ],
-    },
-    {
       role: "Teaching Assistant",
       company: "TU Delft",
-      period: "Sep 2025 - Present",
+      period: "Sep 2025 - Nov 2025",
       description: [
         "I am currently a Teaching Assistant for the CSE program second-year course Big Data Processing.",
         "Helped students have a better understanding of the course material by answering questions about the course theory and assignments.",
@@ -55,10 +45,20 @@ const Experience: React.FC = () => {
     {
       role: "Software Engineer Intern",
       company: "Dizconto",
-      period: "May 2025 - Present",
+      period: "May 2025 - Sep 2025",
       description: [
         "Build backend system of the company's ticket website with RESTful APIs and authentication, using NestJS and TypeScript.",
         "Improve the website’s UI/UX by adding new features, fixing bugs, and improving responsiveness for a better user experience.",
+      ],
+    },
+    {
+      role: "Software Engineer Intern",
+      company: "RET",
+      period: "Apr 2025 - Jun 2025",
+      description: [
+        "Worked with a team of five to develop a web-based prototype application that enables process managers to visualize business processes, their interdependencies, and associated metadata through a layered, graph-based interface.",
+        "Designed and implemented frontend components using React.js with Vite, ensuring a responsive and user-friendly interface.",
+        "Contributed to the backend development by building RESTful API endpoints with Java Spring Boot and connecting them to a PostgreSQL database.",
       ],
     },
   ];
