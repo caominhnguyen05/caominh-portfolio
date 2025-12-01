@@ -28,8 +28,9 @@ const Experience: React.FC = () => {
       company: "TU Delft",
       period: "Sep 2025 - Nov 2025",
       description: [
-        "I am currently a Teaching Assistant for the CSE program second-year course Big Data Processing.",
-        "Helped students have a better understanding of the course material by answering questions about the course theory and assignments.",
+        "Teaching Assistant for the second-year Big Data Processing course in the CSE program.",
+        "Helped students understand concepts and complete assignments about functional programming, Unix command line, batch and stream processing with Apache Spark and Flink.",
+        "Assited with grading exams and providing contructive feedback.",
       ],
     },
     {
@@ -47,8 +48,8 @@ const Experience: React.FC = () => {
       company: "Dizconto",
       period: "May 2025 - Sep 2025",
       description: [
-        "Build backend system of the company's ticket website with RESTful APIs and authentication, using NestJS and TypeScript.",
-        "Improve the website’s UI/UX by adding new features, fixing bugs, and improving responsiveness for a better user experience.",
+        "Built backend system of the company's ticket website with RESTful APIs and authentication, using NestJS and TypeScript.",
+        "Improved the website’s UI/UX by adding new features, fixing bugs, and improving responsiveness for a better user experience.",
       ],
     },
     {
