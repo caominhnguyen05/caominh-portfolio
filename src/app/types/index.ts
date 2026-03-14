@@ -8,6 +8,8 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
+  type: string;
+  tags: string[];
   description: string[];
 }
 
