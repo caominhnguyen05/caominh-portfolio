@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -12,68 +11,103 @@ const Navbar: React.FC = () => {
     { title: "Contact", href: "#contact" },
   ];
 
-  // State to track the index of the hovered link.
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  // An array of refs to store the DOM nodes of each navigation link.
+  const [scrolled, setScrolled] = useState(false);
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
 
-  // State to store the position and width of the underline.
-  const [underlineStyle, setUnderlineStyle] = useState({
-    left: 0,
-    width: 0,
-    opacity: 0,
-  });
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  // This effect runs whenever the hoveredIndex changes.
   useEffect(() => {
     if (hoveredIndex !== null) {
-      const linkEl = linkRefs.current[hoveredIndex];
-      if (linkEl) {
-        setUnderlineStyle({
-          left: linkEl.offsetLeft,
-          width: linkEl.offsetWidth,
+      const el = linkRefs.current[hoveredIndex];
+      if (el) {
+        setPillStyle({
+          left: el.offsetLeft,
+          width: el.offsetWidth,
           opacity: 1,
         });
       }
     } else {
-      setUnderlineStyle((prev) => ({ ...prev, opacity: 0 }));
+      setPillStyle((prev) => ({ ...prev, opacity: 0 }));
     }
   }, [hoveredIndex]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md z-50">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-white">
-          Cao Minh Nguyen
+    <motion.nav
+      className="fixed top-0 left-0 w-full z-50 flex justify-center"
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <motion.div
+        className="mt-4 flex items-center justify-between gap-5 px-5 py-2.5 rounded-full border transition-all duration-500"
+        animate={{
+          backdropFilter: scrolled ? "blur(20px)" : "blur(8px)",
+          backgroundColor: scrolled
+            ? "rgba(10,10,10,0.85)"
+            : "rgba(10,10,10,0.4)",
+          borderColor: scrolled
+            ? "rgba(255,255,255,0.1)"
+            : "rgba(255,255,255,0.06)",
+          width: scrolled ? "520px" : "560px",
+        }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        style={{
+          backdropFilter: "blur(8px)",
+          backgroundColor: "rgba(10,10,10,0.4)",
+          borderColor: "rgba(255,255,255,0.06)",
+          width: "560px",
+        }}
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-sm font-medium text-white/80 hover:text-white transition-colors duration-200 tracking-wide whitespace-nowrap"
+        >
+          Cao Minh
         </Link>
 
+        {/* Links */}
         <div
-          className="hidden md:flex space-x-8 relative"
+          className="flex items-center gap-1 relative"
           onMouseLeave={() => setHoveredIndex(null)}
         >
+          {/* Hover pill background */}
+          <motion.div
+            className="absolute inset-y-0 rounded-full bg-white/[0.08]"
+            animate={{
+              left: pillStyle.left,
+              width: pillStyle.width,
+              opacity: pillStyle.opacity,
+            }}
+            transition={{ type: "spring", stiffness: 400, damping: 35 }}
+          />
+
           {navLinks.map((link, index) => (
             <a
               key={link.title}
               href={link.href}
-              className="text-gray-300 hover:text-white transition-colors duration-300 py-2"
-              onMouseEnter={() => setHoveredIndex(index)}
               ref={(el) => {
                 linkRefs.current[index] = el;
               }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              className={`relative z-10 text-sm px-4 py-1.5 rounded-full transition-colors duration-200 tracking-wide ${
+                hoveredIndex === index
+                  ? "text-white"
+                  : "text-gray-200 hover:text-gray-300"
+              }`}
             >
               {link.title}
             </a>
           ))}
-
-          <motion.div
-            className="absolute bottom-0 h-[2px] bg-white rounded-full"
-            animate={underlineStyle}
-            transition={{ type: "spring", stiffness: 350, damping: 30 }}
-          />
         </div>
-      </div>
-    </nav>
+      </motion.div>
+    </motion.nav>
   );
 };
 
