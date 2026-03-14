@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+.font-serif {
+  font-family: var(--font-serif);
+}
 
 html {
   scroll-behavior: smooth;
