@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
             href="https://www.linkedin.com/in/caominh-nguyen/"
             className="hidden md:block text-[12px] font-medium px-4 py-1.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity whitespace-nowrap flex-shrink-0"
           >
-            Let's connect!
+            Let&apos;s connect!
           </a>
 
           {/* Mobile hamburger */}
@@ -192,7 +192,7 @@ const Navbar: React.FC = () => {
                   onClick={handleMobileLink}
                   className="block w-full text-center text-[13px] font-medium px-4 py-2.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity"
                 >
-                  Let's connect!
+                  Let&apos;s connect!
                 </a>
               </div>
             </div>
