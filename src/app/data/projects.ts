@@ -16,6 +16,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/caominhnguyen05/cs-revision-web",
     liveUrl: "https://cs-revision.vercel.app/",
+    imageUrl: "projects/cs-revision.png",
   },
   {
     title: "Personal Portfolio",
@@ -24,6 +25,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
     githubUrl: "https://github.com/caominhnguyen05/caominh-portfolio",
     liveUrl: "https://caominhnguyen.vercel.app",
+    imageUrl: "/projects/portfolio.png",
   },
   {
     title: "Splitty",
@@ -38,6 +40,7 @@ export const projects: Project[] = [
       "JavaFX",
     ],
     githubUrl: "https://github.com/caominhnguyen05/splitty_manage_expenses",
+    imageUrl: "/projects/splitty.png",
   },
   {
     title: "CineBrowse",
