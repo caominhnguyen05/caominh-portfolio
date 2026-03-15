@@ -114,10 +114,10 @@ const Navbar: React.FC = () => {
 
           {/* Desktop CTA */}
           <a
-            href="mailto:minhnc2005@gmail.com"
+            href="https://www.linkedin.com/in/caominh-nguyen/"
             className="hidden md:block text-[12px] font-medium px-4 py-1.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity whitespace-nowrap flex-shrink-0"
           >
-            Hire me
+            Let's connect!
           </a>
 
           {/* Mobile hamburger */}
@@ -188,11 +188,11 @@ const Navbar: React.FC = () => {
 
               <div className="px-6 py-4 border-t border-white/[0.05]">
                 <a
-                  href="mailto:minhnc2005@gmail.com"
+                  href="https://www.linkedin.com/in/caominh-nguyen/"
                   onClick={handleMobileLink}
                   className="block w-full text-center text-[13px] font-medium px-4 py-2.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity"
                 >
-                  Hire me
+                  Let's connect!
                 </a>
               </div>
             </div>
