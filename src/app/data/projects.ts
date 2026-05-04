@@ -25,7 +25,7 @@ export const projects: Project[] = [
     tags: ["RAG", "ChromaDB", "OpenAI LLM", "Python", "IF-TDF"],
     githubUrl:
       "https://github.com/caominhnguyen05/support-agent-hackerrank-orchestrate",
-    imageUrl: "projects/support-agent.png",
+    imageUrl: "projects/support_agent.png",
   },
   {
     title: "Personal Portfolio",
