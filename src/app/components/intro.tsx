@@ -84,7 +84,7 @@ const Intro: React.FC = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto py-36 lg:py-44 grid lg:grid-cols-[1.08fr_0.92fr] items-center gap-14 lg:gap-20">
         <div className="max-w-4xl">
           <motion.span
-            className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400 block mb-7"
+            className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase block mb-7"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
@@ -100,9 +100,6 @@ const Intro: React.FC = () => {
           >
             Cao Minh Nguyen.
             <br />
-            <span className="italic text-gray-400 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
-              Building things that matter.
-            </span>
           </motion.h1>
 
           <motion.div
@@ -114,14 +111,14 @@ const Intro: React.FC = () => {
           />
 
           <motion.p
-            className="text-gray-300 text-xl md:text-2xl font-light leading-[1.55] max-w-2xl mb-12"
+            className="text-xl md:text-2xl font-light leading-[1.55] max-w-2xl mb-12"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             CS student at TU Delft. Interested in backend systems, cloud
-            infrastructure, and full-stack engineering. Seeking SWE graduate
-            roles in 2026.
+            infrastructure, and AI engineering. Seeking SWE graduate roles in
+            2026.
           </motion.p>
 
           <motion.div

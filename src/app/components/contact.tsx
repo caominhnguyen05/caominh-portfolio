@@ -32,7 +32,7 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-[0.32fr_0.68fr] gap-8 lg:gap-16 items-end mb-12 md:mb-16 border-b border-white/[0.08] pb-10">
-          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase">
             Contact
           </p>
           <h2 className="font-serif text-5xl md:text-7xl font-normal text-white leading-[0.98] tracking-tight">
@@ -44,8 +44,8 @@ const Contact = () => {
           <div className="flex flex-col gap-6">
             <p className="text-xl md:text-2xl text-gray-300 font-light leading-[1.65] max-w-xl">
               I&apos;m actively looking for graduate software engineering roles
-              in 2026. If you have an opening or just want to connect, drop me
-              a message on LinkedIn or via email.
+              in 2026. If you have an opening or just want to connect, drop me a
+              message on LinkedIn or via email.
             </p>
             <a
               href="https://www.linkedin.com/in/caominh-nguyen/"

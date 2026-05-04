@@ -40,12 +40,12 @@ const Projects: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12 mb-12 md:mb-16">
         <div className="grid lg:grid-cols-[0.32fr_0.68fr] gap-8 lg:gap-16 items-end border-b border-white/[0.08] pb-10">
-          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase">
             Projects
           </p>
           <div className="flex items-end justify-between gap-8">
             <h2 className="font-serif text-5xl md:text-7xl font-normal leading-[0.98] tracking-tight text-white">
-              Selected work, built to ship.
+              Built out of curiosity.
             </h2>
 
             <div className="hidden sm:flex items-center gap-2 shrink-0">

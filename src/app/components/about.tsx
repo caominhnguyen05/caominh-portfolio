@@ -8,10 +8,11 @@ const About: React.FC = () => {
     "Java",
     "Python",
     "TypeScript",
+    "Spring Boot",
     "Next.js",
     "React",
-    "Spring Boot",
     "NestJS",
+    "Django",
     "AWS",
     "PostgreSQL",
     "Git",
@@ -29,38 +30,41 @@ const About: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto flex flex-col gap-16 md:gap-20">
         <div className="grid lg:grid-cols-[0.32fr_0.68fr] gap-8 lg:gap-16 items-end border-b border-white/[0.08] pb-10">
-          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase ">
             About
           </p>
           <h2 className="font-serif text-5xl md:text-7xl font-normal leading-[0.98] tracking-tight text-white">
-            Systems thinker with a product eye.
+            Someone who loves to build things, learn new tech, and solve
+            problems.
           </h2>
         </div>
 
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-x-20 gap-y-14 items-start">
           <div className="space-y-7 text-xl md:text-2xl leading-[1.65] font-light text-gray-300">
             <p>
-              I&apos;m <span className="text-white font-normal">Minh</span>, a
-              third-year CS student at{" "}
-              <span className="text-white font-normal">TU Delft</span> from
-              Vietnam.
+              Hi! I&apos;m Minh, a final-year Computer Science student at TU
+              Delft with interests in algorithms & data structures, data
+              analysis, and backend development. I've interned at FPT Software,
+              Dizconto, and RET, building backend systems, modern UI,
+              integrating AWS services, and shipping full-stack products to real
+              users. Outside of code I follow football, train at the gym, and
+              explore European cities when I can.
             </p>
+
             <p>
-              I&apos;ve interned at{" "}
-              <span className="text-white font-normal">FPT Software</span>,{" "}
-              <span className="text-white font-normal">Dizconto</span>, and{" "}
-              <span className="text-white font-normal">RET</span>, building
-              backend systems, modern UI, integrating AWS services, and shipping
-              full-stack products to real users.
+              I've interned at FPT Software, Dizconto, and RET, building backend
+              systems, modern UI, integrating AWS services, and shipping
+              full-stack applications to real users. can.
             </p>
+
             <p>
-              Outside of code I follow football, train at the gym, and explore
-              European cities when I can.
+              In my free time, I enjoy watching football, training at the gym,
+              and travelling around Europe.
             </p>
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+            <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase ">
               Education
             </p>
             <div className="flex flex-col">
@@ -91,14 +95,14 @@ const About: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase ">
             Core Skills
           </p>
           <div className="flex flex-wrap gap-3">
             {skills.map((s, i) => (
               <motion.span
                 key={s}
-                className="text-base md:text-lg text-gray-200 px-5 py-3 border border-white/[0.15] rounded-full hover:border-white/35 hover:text-white hover:bg-white/[0.04] transition-all duration-200"
+                className="text-base md:text-lg text-gray-200 px-5 py-3 border border-white/30 rounded-full hover:border-white/50 hover:text-white hover:bg-white/[0.04] hover:scale-105 transition-all duration-200"
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
