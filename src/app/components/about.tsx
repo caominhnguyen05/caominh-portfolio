@@ -44,16 +44,12 @@ const About: React.FC = () => {
             <p>
               Hi! I&apos;m Minh, a final-year Computer Science student at TU
               Delft with interests in algorithms & data structures, data
-              analysis, and backend development. I've interned at FPT Software,
-              Dizconto, and RET, building backend systems, modern UI,
-              integrating AWS services, and shipping full-stack products to real
-              users. Outside of code I follow football, train at the gym, and
-              explore European cities when I can.
+              analysis, and backend development.
             </p>
 
             <p>
-              I've interned at FPT Software, Dizconto, and RET, building backend
-              systems, modern UI, integrating AWS services, and shipping
+              I&apos;ve interned at FPT Software, Dizconto, and RET, building
+              backend systems, modern UI, integrating AWS services, and shipping
               full-stack applications to real users. can.
             </p>
 
