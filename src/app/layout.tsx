@@ -13,7 +13,7 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Cao Minh | Portfolio",
   description:
-    "Personal portfolio website of [Your Name], a computer science student at TU Delft.",
+    "Portfolio of Cao Minh Nguyen, a computer science student at TU Delft.",
 };
 
 export default function RootLayout({

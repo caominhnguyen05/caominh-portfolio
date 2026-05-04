@@ -21,20 +21,24 @@ const About: React.FC = () => {
   return (
     <motion.section
       id="about"
-      className="py-24 px-6 md:px-12"
+      className="py-28 md:py-36 px-6 md:px-12"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-3xl mx-auto flex flex-col gap-16">
-        {/* Label */}
-        <p className="text-l font-medium tracking-[0.12em] uppercase ">About</p>
+      <div className="max-w-6xl mx-auto flex flex-col gap-16 md:gap-20">
+        <div className="grid lg:grid-cols-[0.32fr_0.68fr] gap-8 lg:gap-16 items-end border-b border-white/[0.08] pb-10">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
+            About
+          </p>
+          <h2 className="font-serif text-5xl md:text-7xl font-normal leading-[0.98] tracking-tight text-white">
+            Systems thinker with a product eye.
+          </h2>
+        </div>
 
-        {/* Row 1 — bio left, education right */}
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
-          {/* Bio */}
-          <div className="space-y-5 text-[15px] leading-[1.85] font-light text-gray-300">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-x-20 gap-y-14 items-start">
+          <div className="space-y-7 text-xl md:text-2xl leading-[1.65] font-light text-gray-300">
             <p>
               I&apos;m <span className="text-white font-normal">Minh</span>, a
               third-year CS student at{" "}
@@ -45,7 +49,7 @@ const About: React.FC = () => {
               I&apos;ve interned at{" "}
               <span className="text-white font-normal">FPT Software</span>,{" "}
               <span className="text-white font-normal">Dizconto</span>, and{" "}
-              <span className="text-white font-normal">RET</span> — building
+              <span className="text-white font-normal">RET</span>, building
               backend systems, modern UI, integrating AWS services, and shipping
               full-stack products to real users.
             </p>
@@ -55,30 +59,29 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          {/* Education */}
           <div className="flex flex-col gap-4">
-            <p className="text-sm font-medium tracking-[0.12em] uppercase text-gray-400">
+            <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
               Education
             </p>
             <div className="flex flex-col">
               {education.map((edu, i) => (
                 <motion.div
                   key={i}
-                  className="flex justify-between items-start py-4 border-b border-white/[0.3] last:border-0"
+                  className="flex justify-between items-start py-6 border-b border-white/[0.1] last:border-0"
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
                 >
                   <div className="flex flex-col gap-1">
-                    <p className="text-[14px] font-medium text-gray-100">
+                    <p className="text-lg md:text-xl font-semibold text-gray-100">
                       {edu.institution}
                     </p>
-                    <p className="text-[12px] text-gray-400 leading-relaxed">
+                    <p className="text-base text-gray-400 leading-relaxed">
                       {edu.degree}
                     </p>
                   </div>
-                  <span className="text-xs text-gray-400 whitespace-nowrap ml-6 mt-0.5 tabular-nums">
+                  <span className="text-sm text-gray-400 whitespace-nowrap ml-6 mt-1 tabular-nums">
                     {edu.years}
                   </span>
                 </motion.div>
@@ -87,16 +90,15 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Skills — full width */}
         <div className="flex flex-col gap-5">
-          <p className="text-sm font-medium tracking-[0.12em] uppercase text-gray-400">
+          <p className="text-sm md:text-base font-semibold tracking-[0.16em] uppercase text-gray-400">
             Core Skills
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {skills.map((s, i) => (
               <motion.span
                 key={s}
-                className="text-[13px] text-gray-300 px-4 py-2 border border-white/[0.15] rounded-full hover:border-white/20 hover:text-white transition-all duration-200"
+                className="text-base md:text-lg text-gray-200 px-5 py-3 border border-white/[0.15] rounded-full hover:border-white/35 hover:text-white hover:bg-white/[0.04] transition-all duration-200"
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

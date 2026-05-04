@@ -38,7 +38,6 @@ const Navbar: React.FC = () => {
     }
   }, [hoveredIndex]);
 
-  // Close mobile menu on link click
   const handleMobileLink = () => setMobileOpen(false);
 
   return (
@@ -50,7 +49,7 @@ const Navbar: React.FC = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <motion.div
-          className="mt-4 flex items-center justify-between px-4 py-2.5 rounded-full border w-full"
+          className="mt-4 flex items-center justify-between px-4 py-3 rounded-full border w-full"
           animate={{
             backgroundColor: scrolled
               ? "rgba(8,8,8,0.92)"
@@ -59,7 +58,7 @@ const Navbar: React.FC = () => {
               ? "rgba(255,255,255,0.12)"
               : "rgba(255,255,255,0.07)",
             boxShadow: scrolled
-              ? "0 0 0 1px rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.6), 0 0 80px rgba(99,102,241,0.07)"
+              ? "0 0 0 1px rgba(255,255,255,0.04), 0 8px 32px rgba(0,0,0,0.6)"
               : "0 0 0 1px rgba(255,255,255,0.02), 0 4px 16px rgba(0,0,0,0.4)",
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -68,18 +67,16 @@ const Navbar: React.FC = () => {
             WebkitBackdropFilter: "blur(24px)",
             backgroundColor: "rgba(10,10,10,0.5)",
             borderColor: "rgba(255,255,255,0.07)",
-            maxWidth: "600px",
+            maxWidth: "760px",
           }}
         >
-          {/* Logo */}
           <Link
             href="/"
-            className="text-[13px] font-medium text-white/80 hover:text-white transition-colors duration-200 tracking-wide whitespace-nowrap flex-shrink-0"
+            className="text-base font-semibold text-white/90 hover:text-white transition-colors duration-200 tracking-wide whitespace-nowrap flex-shrink-0"
           >
             Cao Minh
           </Link>
 
-          {/* Desktop links */}
           <div
             className="hidden md:flex items-center gap-1 relative"
             onMouseLeave={() => setHoveredIndex(null)}
@@ -101,7 +98,7 @@ const Navbar: React.FC = () => {
                   linkRefs.current[index] = el;
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
-                className={`relative z-10 text-[13px] px-3.5 py-1.5 rounded-full transition-colors duration-200 tracking-wide ${
+                className={`relative z-10 text-sm px-4 py-2 rounded-full transition-colors duration-200 tracking-wide ${
                   hoveredIndex === index
                     ? "text-white"
                     : "text-gray-300 hover:text-gray-200"
@@ -112,15 +109,13 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
           <a
             href="https://www.linkedin.com/in/caominh-nguyen/"
-            className="hidden md:block text-[12px] font-medium px-4 py-1.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity whitespace-nowrap flex-shrink-0"
+            className="hidden md:block text-sm font-semibold px-5 py-2 rounded-full bg-white text-black hover:bg-gray-200 transition-colors whitespace-nowrap flex-shrink-0"
           >
-            Let&apos;s connect!
+            Connect
           </a>
 
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 flex-shrink-0"
@@ -151,7 +146,6 @@ const Navbar: React.FC = () => {
         </motion.div>
       </motion.nav>
 
-      {/* Mobile dropdown */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -162,13 +156,12 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <div
-              className="mt-20 rounded-2xl border border-white/[0.08] overflow-hidden"
+              className="mt-20 rounded-lg border border-white/[0.08] overflow-hidden"
               style={{
                 backgroundColor: "rgba(8,8,8,0.96)",
                 backdropFilter: "blur(32px)",
                 WebkitBackdropFilter: "blur(32px)",
-                boxShadow:
-                  "0 8px 40px rgba(0,0,0,0.7), 0 0 80px rgba(99,102,241,0.06)",
+                boxShadow: "0 8px 40px rgba(0,0,0,0.7)",
               }}
             >
               {navLinks.map((link, index) => (
@@ -176,13 +169,13 @@ const Navbar: React.FC = () => {
                   key={link.title}
                   href={link.href}
                   onClick={handleMobileLink}
-                  className="flex items-center justify-between px-6 py-4 text-[15px] text-gray-300 hover:text-white hover:bg-white/[0.04] transition-all duration-150 border-b border-white/[0.05] last:border-b-0"
+                  className="flex items-center justify-between px-6 py-5 text-lg text-gray-300 hover:text-white hover:bg-white/[0.04] transition-all duration-150 border-b border-white/[0.05] last:border-b-0"
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: index * 0.05 }}
                 >
                   <span>{link.title}</span>
-                  <span className="text-gray-700 text-xs">↗</span>
+                  <span className="text-gray-600 text-sm">{"->"}</span>
                 </motion.a>
               ))}
 
@@ -190,9 +183,9 @@ const Navbar: React.FC = () => {
                 <a
                   href="https://www.linkedin.com/in/caominh-nguyen/"
                   onClick={handleMobileLink}
-                  className="block w-full text-center text-[13px] font-medium px-4 py-2.5 rounded-full bg-white text-black hover:opacity-80 transition-opacity"
+                  className="block w-full text-center text-base font-semibold px-4 py-3 rounded-full bg-white text-black hover:bg-gray-200 transition-colors"
                 >
-                  Let&apos;s connect!
+                  Connect
                 </a>
               </div>
             </div>
